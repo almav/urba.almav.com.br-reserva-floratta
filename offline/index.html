@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://urba.almav.com.br/reserva-floratta/index.html">
+    <meta property="og:title" content="Reserva Floratta">
+    <meta property="og:site_name" content="Reserva Floratta">
+    <meta property="og:description" content="Mapa Interativo do Loteamento">
+    <meta property="og:image" content="https://maps.app.almav.com/apiv1/assets/images/reserva-floratta-877w.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="877">
+    <meta property="og:image:height" content="700">
+    <meta property="og:type" content="website">
+
+    <meta name="description"
+        content="Mapa Interativo do Loteamento Aberto. Explore o empreendimento com detalhes incríveis.">
+    <meta name="keywords" content="Mapa Interativo, Loteamento Aberto, SP, Reserva Floratta, Almav">
+
+    <link rel="apple-touch-icon" type="image/svg+xml" sizes="180x180"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="manifest" href="https://maps.app.almav.com/apiv1/assets/ico/reservafloratta.site.webmanifest">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Reserva Floratta">
+
+    <meta name="theme-color" content="#333333">
+
+    <link rel="icon" type="image/svg+xml" href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg" />
+
+    <title>Reserva Floratta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        /*
+            Inicializar o mapa
+            -------------------
+            * A função `initMap` será executada após o carregamento do mapa.
+            * O parâmetro da url `callback` é o nome da função que será 
+            executada após o carregamento do mapa. 
+            Por exemplo: `callback=initMap`.
+        */
+        function initMap() {
+            // Criar o objeto do mapa e definir o ID `map` como destino
+            map = new almav.maps.Map(document.getElementById('map'), {
+                fitBounds: true, // Ajustar o zoom para os limites dos elementos
+                showButtonsZoom: true, // mostra botões de zoom in e zoom out
+                showAlmavLogo: true, // mostra o logo do Almav
+            });
+        }
+
+
+        // Registrar o SW para manter o Mapa Interativo operante mesmo Offline
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('https://urba.almav.com.br/reserva-floratta/offline/sw.js')
+                .then(function (registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                }).catch(function (error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Esse é o elemento que receberá o mapa -->
+    <div id="map"></div>
+
+    <!-- Importante -->
+    <!-- key: é a chave de API -->
+    <!-- callback: é o nome da função que será executada após o carregamento do mapa -->
+    <script
+        src="https://maps.app.almav.com/apiv1/js/almav-initmap.js?key=c3bcfb0b-b0df-45ba-a63c-1c7d7521e48a&callback=initMap"
+        defer></script>
+
+
+    <!-- Opcional: Impedir que smartphones desliguem a tela durante o uso -->
+    <!-- Autor: https://github.com/richtr/NoSleep.js.git -->
+    <script src="https://maps.app.almav.com/apiv1/assets/vendor/richtr/NoSleep.min.js"></script>
+    <script>var noSleep = new NoSleep(); noSleep.enable();</script>
+</body>
+
+</html>

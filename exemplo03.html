@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://urba.almav.com.br/reserva-floratta/index.html">
+    <meta property="og:title" content="Reserva Floratta">
+    <meta property="og:site_name" content="Reserva Floratta">
+    <meta property="og:description" content="Mapa Interativo do Loteamento">
+    <meta property="og:image" content="https://maps.app.almav.com/apiv1/assets/images/reserva-floratta-877w.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="877">
+    <meta property="og:image:height" content="700">
+    <meta property="og:type" content="website">
+
+    <meta name="description"
+        content="Mapa Interativo do Loteamento Aberto. Explore o empreendimento com detalhes incríveis.">
+    <meta name="keywords" content="Mapa Interativo, Loteamento Aberto, SP, Reserva Floratta, Almav">
+
+    <link rel="apple-touch-icon" type="image/svg+xml" sizes="180x180"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16"
+        href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg">
+    <link rel="manifest" href="https://maps.app.almav.com/apiv1/assets/ico/reservafloratta.site.webmanifest">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Reserva Floratta">
+
+    <meta name="theme-color" content="#333333">
+
+    <link rel="icon" type="image/svg+xml" href="https://maps.app.almav.com/apiv1/assets/ico/favicon-urba.svg" />
+
+    <title>Reserva Floratta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #666666;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #map {
+            width: 100%;
+            height: 550px;
+            background-color: #e0e0e0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            color: #333333;
+            line-height: 1.6;
+        }
+    </style>
+    <script>
+        function initMap() {
+            map = new almav.maps.Map(document.getElementById('map'), {
+                fitBounds: true,
+                showButtonsZoom: true,
+                /* Impedir que o mapa atrapalhe 
+                a interação com a rolagem da página */
+                cooperativeGestures: true,
+                locale: {
+                    'CooperativeGesturesHandler.WindowsHelpText': 'Use Ctrl + rolagem para fazer zoom no mapa.',
+                    'CooperativeGesturesHandler.MacHelpText': 'Use ⌘ + rolagem para fazer zoom no mapa.',
+                    'CooperativeGesturesHandler.MobileHelpText': 'Use 2 dedos para mover o mapa.',
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container content">
+        <h2>Seção 1: Informações Adicionais</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula cursus dolor, vel dictum ligula
+            interdum nec.
+            Phasellus quis justo sit amet eros auctor viverra. Duis euismod ligula a erat fermentum, ut ultricies lacus
+            scelerisque.
+            Vestibulum in ultricies magna, et feugiat libero. Aliquam erat volutpat. Suspendisse potenti. Mauris ut
+            metus sem.
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam
+            ullamcorper dui
+            a tortor consequat, eget cursus urna interdum. Nullam vehicula ligula nec libero pretium, nec consectetur
+            urna ultrices.</p>
+    </div>
+
+    <div class="container content">
+        <h2>...</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula cursus dolor, vel dictum ligula
+            interdum nec.
+            Phasellus quis justo sit amet eros auctor viverra. Duis euismod ligula a erat fermentum, ut ultricies lacus
+            scelerisque.
+            Vestibulum in ultricies magna, et feugiat libero. Aliquam erat volutpat. Suspendisse potenti. Mauris ut
+            metus sem.</p>
+    </div>
+
+    <div class="container">
+        <h1>Exemplo de Uso da API Almav Mapas Interativos</h1>
+        <h2>Mapa Interativo</h2>
+        <div id="map"></div>
+    </div>
+
+    <div class="container content">
+        <h2>Seção 2: Mais Informações</h2>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer a neque arcu.
+            Proin nec lorem ac velit scelerisque hendrerit. Nullam scelerisque libero et libero tincidunt, ac
+            sollicitudin libero
+            sodales. In hac habitasse platea dictumst. Quisque quis sapien nec augue feugiat viverra. Sed ut justo nec
+            urna tempor
+            egestas. Curabitur interdum eu ligula ac malesuada. Nulla facilisi. Nullam tempor nisl at orci malesuada,
+            eget dapibus
+            mauris gravida. Sed ac felis vel lorem varius vestibulum. Aenean id facilisis elit. Phasellus tincidunt
+            nulla non orci
+            convallis, in dictum arcu consequat.</p>
+    </div> 
+
+    <div class="container content">
+        <h2>Seção 3: Mais Informações</h2>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer a neque arcu.
+            Proin nec lorem ac velit scelerisque hendrerit. Nullam scelerisque libero et libero tincidunt, ac
+            sollicitudin libero
+            sodales. In hac habitasse platea dictumst. Quisque quis sapien nec augue feugiat viverra. Sed ut justo nec
+            urna tempor
+            egestas. Curabitur interdum eu ligula ac malesuada. Nulla facilisi. Nullam tempor nisl at orci malesuada,
+            eget dapibus
+            mauris gravida. Sed ac felis vel lorem varius vestibulum. Aenean id facilisis elit. Phasellus tincidunt
+            nulla non orci
+            convallis, in dictum arcu consequat.</p>
+    </div>
+
+    <script
+        src="https://maps.app.almav.com/apiv1/js/almav-initmap.js?key=c3bcfb0b-b0df-45ba-a63c-1c7d7521e48a&callback=initMap"
+        defer></script>
+    <script src="https://maps.app.almav.com/apiv1/assets/vendor/richtr/NoSleep.min.js"></script>
+    <script>
+        var noSleep = new NoSleep();
+        noSleep.enable();
+    </script>
+</body>
+
+</html>

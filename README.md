@@ -16,7 +16,7 @@ Este repositório contém exemplos e documentação para utilizar a API do Mapa 
   
 - Aviso de rolagem da página (exemplo03.html):
   - https://urba.almav.com.br/reserva-floratta/exemplo03.html
-  - 
+
 - Mapa em perspectiva (exemplo04.html):
   - https://urba.almav.com.br/reserva-floratta/exemplo04.html
   

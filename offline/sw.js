@@ -1,6 +1,6 @@
 // Este é o service worker para cópia offline das páginas
 
-const CACHE = "almav-mapas-reserva-floratta-offline-v1";
+const CACHE = "almav-mapas-reserva-floratta-offline-v2";
 
 // Importa a biblioteca Workbox do CDN
 // https://developer.chrome.com/docs/workbox/modules/workbox-sw
